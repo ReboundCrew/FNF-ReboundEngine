@@ -214,7 +214,7 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
 		}
 
-		#if discord_rpc
+		#if DISCORD_ALLOWED
 		initDiscord();
 		#end
 
@@ -849,7 +849,7 @@ class PlayState extends MusicBeatState
 
 	function initDiscord():Void
 	{
-		#if discord_rpc
+		#if DISCORD_ALLOWED
 		storyDifficultyText = CoolUtil.difficultyString();
 		iconRPC = SONG.player2;
 
