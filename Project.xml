@@ -35,7 +35,7 @@
 
 	<define name="DISCORD_ALLOWED" if="desktop"/>
 	<define name="hscriptPos"/>
-	<define name="MP4_ALLOWED" if="desktop || android"/>
+	<define name="MP4_ALLOWED" if="desktop || mobile"/>
 	<define name="HSCRIPT_ALLOWED" if="windows || mobile"/>
 
 	<!-- _____________________________ Preload Settings ____________________________ -->
