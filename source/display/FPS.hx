@@ -74,9 +74,7 @@ class FPS extends TextField
 		if (mem > peak)
 			peak = mem;
 
-		text += getSizeLabel(System.totalMemory) + "\n";
-
-		text += getSizeLabel(peak) + "\n";
+		text += getSizeLabel(System.totalMemory) + '/' + getSizeLabel(peak);
 
 		textColor = 0xFFFFFFFF;
 		if (currentFPS <= FlxG.drawFramerate / 2 && currentFPS >= FlxG.drawFramerate / 3) textColor = FlxColor.YELLOW;
