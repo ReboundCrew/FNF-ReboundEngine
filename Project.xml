@@ -14,7 +14,7 @@
 
 	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
 
-	<window if="mobile" orientation="landscape" fullscreen="true" resizable="false" allow-shaders="true" require-shaders="true" allow-high-dpi="true" />
+	<window if="mobile" orientation="landscape" fullscreen="true" resizable="false" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
@@ -33,11 +33,10 @@
 
 	<!-- _____________________________ Libraries Path ____________________________ -->
 
-	<define name="DISCORD_ALLOWED" if="windows||linux||mac"/>
+	<define name="DISCORD_ALLOWED" if="desktop"/>
 	<define name="hscriptPos"/>
 	<define name="MP4_ALLOWED" if="desktop || android"/>
 	<define name="HSCRIPT_ALLOWED" if="windows || mobile"/>
-	<define name="LUA_ALLOWED" if="desktop||mobile" />
 
 	<!-- _____________________________ Preload Settings ____________________________ -->
 	<section if="PRELOAD_ALL">
@@ -100,19 +99,10 @@
 	<haxedev set='webgl' if="web" />
 	<haxelib name="flixel-addons" />
 	<haxelib name="hscript" if="HSCRIPT_ALLOWED"/>
-	<haxelib name="extension-androidtools" if="android" />
-	<haxelib name="hxCodec" if="MP4_ALLOWED" />
-	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
+	<haxelib name="hxvlc" if="MP4_ALLOWED" />
 	<haxelib name="flixel-ui" />
 	<haxelib name="polymod"/>
 	<haxelib name="discord_rpc" if="DISCORD_ALLOWED"/>
-
-	<!-- ______________________________ Android Configs _____________________________ -->
-
-	<config:android permission="android.permission.READ_EXTERNAL_STORAGE" if="android"/>
-	<config:android permission="android.permission.WRITE_EXTERNAL_STORAGE" if="android"/>
-        <config:android gradle-version="7.5.1" />
-        <config:android gradle-plugin="7.3.1" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
@@ -130,8 +120,6 @@
 	<haxedef name="HXCPP_STACK_LINE" />
 	<haxedef name="HXCPP_STACK_TRACE"/>
 
-        <!-- Show debug traces for hxCodec -->
-        <haxedef name="HXC_DEBUG_TRACE" if="debug" />
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
