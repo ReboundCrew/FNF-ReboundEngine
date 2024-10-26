@@ -30,7 +30,7 @@ class FPS extends TextField
 		currentFPS = 0;
 		selectable = false;
 		mouseEnabled = false;
-		defaultTextFormat = new TextFormat("_sans", 12, color);
+		defaultTextFormat = new TextFormat("_sans", #if desktop 12 #else 14 #end, color);
 		text = "FPS: ";
 
 		cacheCount = 0;
@@ -68,15 +68,20 @@ class FPS extends TextField
 
 		text = "";
 
-		text += "FPS: " + currentFPS + "\n";
+		text += currentFPS + " FPS" + "[" + Std.int((1 / currentFPS) * 1000) + "ms]" + "\n";
 
 		var mem = System.totalMemory;
 		if (mem > peak)
 			peak = mem;
 
-		text += "Memory: " + getSizeLabel(System.totalMemory) + "\n";
+		text += getSizeLabel(System.totalMemory) + "\n";
 
-		text += "Memory Peak: " + getSizeLabel(peak) + "\n";
+		text += getSizeLabel(peak) + "\n";
+
+		textColor = 0xFFFFFFFF;
+		if (currentFPS <= FlxG.drawFramerate / 2 && currentFPS >= FlxG.drawFramerate / 3) textColor = FlxColor.YELLOW;
+		else if (currentFPS <= FlxG.drawFramerate / 3 && currentFPS >= FlxG.drawFramerate / 4) textColor = FlxColor.ORANGE;
+		else if (currentFPS < FlxG.drawFramerate * 0.5) textColor = FlxColor.RED;
 	}
 
 	final dataTexts = ["B", "KB", "MB", "GB", "TB", "PB"];
