@@ -718,8 +718,8 @@ class PlayState extends MusicBeatState
 		strumNotes = new FlxTypedGroup<FlxBasic>();
 		hudElements = new FlxSpriteGroup();
 		add(gameCombo);
-		add(gameCombo);
-		add(gameCombo);
+		add(strumNotes);
+		add(hudElements);
 
 		strumLine = new FlxSprite(0, 50).makeGraphic(FlxG.width, 10);
 		if (PreferencesMenu.getPref('downscroll'))
