@@ -51,7 +51,7 @@ class ChartingState extends MusicBeatState
 	var bpmTxt:FlxText;
 
 	var strumLine:FlxSprite;
-	var curSong:String = 'Dadbattle';
+	var curSong:String = 'test';
 	var amountSteps:Int = 0;
 	var bullshitUI:FlxGroup;
 
@@ -87,7 +87,7 @@ class ChartingState extends MusicBeatState
 		add(gridBG);
 
 		leftIcon = new HealthIcon('bf');
-		rightIcon = new HealthIcon('dad');
+		rightIcon = new HealthIcon('bf');
 		leftIcon.scrollFactor.set(1, 1);
 		rightIcon.scrollFactor.set(1, 1);
 
@@ -116,7 +116,7 @@ class ChartingState extends MusicBeatState
 				bpm: 150,
 				needsVoices: true,
 				player1: 'bf',
-				player2: 'dad',
+				player2: 'bf',
 				speed: 1
 			};
 		}
