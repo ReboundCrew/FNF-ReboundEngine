@@ -110,6 +110,7 @@ class PlayState extends MusicBeatState
 	private var iconP2:HealthIcon;
 	private var camHUD:FlxCamera;
 	private var camGame:FlxCamera;
+	private var camOther:FlxCamera;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 
@@ -184,10 +185,13 @@ class PlayState extends MusicBeatState
 
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
+		camOther = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
+		camOther.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD, false);
+		FlxG.cameras.add(camOther, false);
 
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
@@ -710,6 +714,13 @@ class PlayState extends MusicBeatState
 
 		Conductor.songPosition = -5000;
 
+		gameCombo = new FlxSpriteGroup();
+		strumNotes = new FlxTypedGroup<FlxBasic>();
+		hudElements = new FlxSpriteGroup();
+		add(gameCombo);
+		add(gameCombo);
+		add(gameCombo);
+
 		strumLine = new FlxSprite(0, 50).makeGraphic(FlxG.width, 10);
 		if (PreferencesMenu.getPref('downscroll'))
 			strumLine.y = FlxG.height - 150;
@@ -745,7 +756,7 @@ class PlayState extends MusicBeatState
 		healthBarBG = new FlxSprite(0, 635).loadGraphic(Paths.image('healthBar'));
 		healthBarBG.screenCenter(X);
 		healthBarBG.scrollFactor.set();
-		add(healthBarBG);
+		hudElements.add(healthBarBG);
 		if (PreferencesMenu.getPref('downscroll'))
 			healthBarBG.y = FlxG.height * 0.1;
 
@@ -754,31 +765,25 @@ class PlayState extends MusicBeatState
 		healthBar.scrollFactor.set();
 		healthBar.createFilledBar(0xFFFF0000, 0xFF31b0d1);
 		// healthBar
-		add(healthBar);
-
-		scoreTxt = new FlxText(0, 678, FlxG.width);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 17, FlxColor.WHITE, CENTER, OUTLINE, FlxColor.BLACK);
-        scoreTxt.borderSize = 1.25;
-		scoreTxt.scrollFactor.set();
-		add(scoreTxt);
+		hudElements.add(healthBar);
 
 		iconP1 = new HealthIcon(SONG.player1, true);
 		iconP1.y = healthBar.y - (iconP1.height / 2);
-		add(iconP1);
+		hudElements.add(iconP1);
 
 		iconP2 = new HealthIcon(SONG.player2, false);
 		iconP2.y = healthBar.y - (iconP2.height / 2);
-		add(iconP2);
+		hudElements.add(iconP2);
 
-		grpNoteSplashes.cameras = [camHUD];
-		strumLineNotes.cameras = [camHUD];
-		notes.cameras = [camHUD];
-		healthBar.cameras = [camHUD];
-		healthBarBG.cameras = [camHUD];
-		iconP1.cameras = [camHUD];
-		iconP2.cameras = [camHUD];
-		scoreTxt.cameras = [camHUD];
-		doof.cameras = [camHUD];
+		scoreTxt = new FlxText(0, 678, FlxG.width);
+		scoreTxt.setFormat(Paths.font("vcr.ttf"), 17, FlxColor.WHITE, CENTER, OUTLINE, FlxColor.BLACK);
+       	 	scoreTxt.borderSize = 1.25;
+		scoreTxt.scrollFactor.set();
+		hudElements.add(scoreTxt);
+
+		gameCombo.cameras = [camHUD];
+		strumNotes.cameras = [camHUD];
+		hudElements.cameras = [camHUD];
 
 		#if mobile
 		addMobileControls(false);
@@ -1142,7 +1147,7 @@ class PlayState extends MusicBeatState
 		FlxG.sound.list.add(vocals);
 
 		notes = new FlxTypedGroup<Note>();
-		add(notes);
+		strumNotes.add(notes);
 
 		var noteData:Array<SwagSection>;
 
@@ -1954,6 +1959,13 @@ class PlayState extends MusicBeatState
 			startCountdown();
 	}
 
+	// Stores Ratings and Combo Sprites in a group
+	public var gameCombo:FlxSpriteGroup;
+	// Stores HUD Objects in a Group
+	public var hudElements:FlxSpriteGroup;
+	// Stores Note Objects in a Group
+	public var strumNotes:FlxTypedGroup<FlxBasic>;
+
 	private function popUpScore(strumtime:Float, daNote:Note):Void
 	{
 		var noteDiff:Float = Math.abs(strumtime - Conductor.songPosition);
@@ -2029,7 +2041,7 @@ class PlayState extends MusicBeatState
 		comboSpr.velocity.y -= 150;
 
 		comboSpr.velocity.x += FlxG.random.int(1, 10);
-		add(rating);
+		gameCombo.add(rating);
 
 		if (!curStage.startsWith('school'))
 		{
@@ -2077,7 +2089,7 @@ class PlayState extends MusicBeatState
 			numScore.velocity.x = FlxG.random.float(-5, 5);
 
 			if (combo >= 10 || combo == 0)
-				add(numScore);
+				gameCombo.add(numScore);
 
 			FlxTween.tween(numScore, {alpha: 0}, 0.2, {
 				onComplete: function(tween:FlxTween)
