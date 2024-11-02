@@ -2,8 +2,6 @@ package ui;
 
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.gamepad.FlxGamepad;
-import Controls.Control;
-import Controls.Device;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
