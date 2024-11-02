@@ -1,4 +1,4 @@
-package;
+package funkin.states;
 
 #if DISCORD_ALLOWED
 import Discord.DiscordClient;
