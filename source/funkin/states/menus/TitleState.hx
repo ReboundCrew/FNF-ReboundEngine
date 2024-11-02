@@ -1,4 +1,4 @@
-package funkin.states;
+package funkin.states.menus;
 
 import openfl.display.Sprite;
 import openfl.net.NetStream;

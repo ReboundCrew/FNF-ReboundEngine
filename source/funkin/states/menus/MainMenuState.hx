@@ -1,4 +1,4 @@
-package funkin.states;
+package funkin.states.menus;
 
 import flixel.util.FlxTimer;
 import flixel.FlxState;

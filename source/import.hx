@@ -4,8 +4,8 @@ import funkin.data.FPSCounter;
 import Paths;
 
 //States
-import funkin.states.TitleState;
-import funkin.states.MainMenuState;
-import funkin.states.FreeplayState;
-import funkin.states.StoryMenuState;
+import funkin.states.menus.TitleState;
+import funkin.states.menus.MainMenuState;
+import funkin.states.menus.FreeplayState;
+import funkin.states.menus.StoryMenuState;
 #end
