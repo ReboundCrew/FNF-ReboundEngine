@@ -12,13 +12,8 @@
 - And Many Different Cool Things
 # Dev Team Members
 - [MaysLastPlay](https://github.com/MaysLastPlayGithub) - Main Programmer
-- [MemeHoovy](https://github.com/MemeHovy) - Second Programmer
-- [Stefan2008](https://github.com/Stefan2008Github) - Third Programmer
-- [JonnyCat](https://github.com/JonnyCatMeow) - Fourth Programmer
-- [RecoloredPoyo4](https://github.com/Poyo2007) - Fifth Programmer
-- [DMMaster](https://github.com/DMMaster636) - Logo Designer, Sixth Programmer
-# Former Dev Team Members
-- [Mcagabe19](https://github.com/mcagabe19) - Programmer
+- [Stefan2008](https://github.com/Stefan2008Git) - Second Programmer
+
 ## Credits / shoutouts to OG FNF Team
 
 - [ninjamuffin99](https://twitter.com/ninja_muffin99) - Programmer
