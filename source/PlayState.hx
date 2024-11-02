@@ -1,5 +1,6 @@
 package;
 
+import flixel.group.FlxSpriteGroup;
 import animate.FlxAnimate;
 import shaderslmfao.BuildingShaders;
 import ui.PreferencesMenu;
@@ -1919,7 +1920,7 @@ class PlayState extends MusicBeatState
 
 	var endingSong:Bool = false;
 
-	public function playCutscene(name:String)
+	public function playCutscene(name:String, shouldLoop:Bool = false)
 	{
 		#if MP4_ALLOWED
 		inCutscene = true;
@@ -1936,13 +1937,13 @@ class PlayState extends MusicBeatState
 			return;
 		}
 
-		var video:VideoHandler = new VideoHandler();
-		video.playVideo(filepath);
-		video.finishCallback = function()
+		var video:FlxVideoSprite = new FlxVideoSprite();
+		video.load(filepath, shouldLoop ? ['input-repeat=65545'] : null);
+		video.bitmap.onEndReached.add(function()
 		{
 			startAndEnd();
 			return;
-		}
+		});
 		#else
 		FlxG.log.warn('Platform not supported!');
 		startAndEnd();
