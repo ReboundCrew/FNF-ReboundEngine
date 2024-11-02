@@ -7,4 +7,5 @@ import Paths;
 import funkin.states.TitleState;
 import funkin.states.MainMenuState;
 import funkin.states.FreeplayState;
+import funkin.states.StoryMenuState;
 #end
