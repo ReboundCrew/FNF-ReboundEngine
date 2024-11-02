@@ -20,6 +20,8 @@ import funkin.data.Controls;
 import funkin.data.Controls.Control;
 import funkin.data.Controls.Device;
 #if mobile
+import funkin.data.mobile.controls.flixel.FlxButton;
+import funkin.data.mobile.controls.flixel.FlxHitbox;
 import funkin.data.mobile.controls.MobileControls;
 import funkin.data.mobile.controls.flixel.FlxVirtualPad;
 #end
