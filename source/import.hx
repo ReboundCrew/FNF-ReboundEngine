@@ -1,7 +1,7 @@
 #if !macro
 //Data
 import funkin.data.FPSCounter;
-import Paths;
+import funkin.data.Paths;
 
 //States
 import funkin.states.menus.TitleState;
