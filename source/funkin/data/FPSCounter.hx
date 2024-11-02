@@ -7,7 +7,7 @@ import openfl.system.System;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
 
-class FPS extends TextField
+class FPSCounter extends TextField
 {
 	/**
 		The current frame rate, expressed using frames-per-second
