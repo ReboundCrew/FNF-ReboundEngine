@@ -3,6 +3,7 @@
 import flixel.FlxCamera;
 import flixel.input.actions.FlxActionInput;
 import flixel.util.FlxDestroyUtil;
+import flixel.util.FlxColor;
 
 //Data
 import funkin.data.FPSCounter;
