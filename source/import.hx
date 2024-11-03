@@ -9,6 +9,7 @@ import funkin.data.FPSCounter;
 import funkin.data.Paths;
 
 //States
+import funkin.states.PlayState;
 import funkin.states.menus.TitleState;
 import funkin.states.menus.MainMenuState;
 import funkin.states.menus.FreeplayState;
