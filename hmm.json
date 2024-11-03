@@ -51,6 +51,11 @@
       "version": "1.2.4"
     },
     {
+      "name": "polymod",
+      "type": "haxelib",
+      "version": null
+    },
+    {
       "name": "discord_rpc",
       "type": "git",
       "dir": null,
