@@ -23,6 +23,7 @@ jobs:
 
       - name: Install Haxelib
         run: |
+          haxelib setup C:haxelib
           haxelib install lime 7.9.0
           haxelib install openfl 9.1.0
           haxelib install flixel 4.11.0
@@ -68,11 +69,8 @@ jobs:
       - name: Setup Java JDK
         uses: actions/setup-java@main
         with:
-          distribution: zulu
-          java-version: 11
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@main
+          distribution: "zulu"
+          java-version: 18
 
       - name: Setup Haxe
         uses: krdlab/setup-haxe@master
