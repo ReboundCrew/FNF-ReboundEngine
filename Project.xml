@@ -99,7 +99,6 @@
 	<haxedev set='webgl' if="web" />
 	<haxelib name="flixel-addons" />
 	<haxelib name="hscript" if="HSCRIPT_ALLOWED"/>
-	<haxelib name="SScript" if="HSCRIPT_ALLOWED"/>
 	<haxelib name="hxvlc" if="MP4_ALLOWED" />
 	<haxelib name="flixel-ui" />
 	<haxelib name="polymod"/>
