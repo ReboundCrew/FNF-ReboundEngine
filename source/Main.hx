@@ -28,7 +28,6 @@ class Main extends Sprite
 
 	public function new()
 	{
-                SUtil.gameCrashCheck();
 
 		super();
 
@@ -40,6 +39,9 @@ class Main extends Sprite
 		{
 			addEventListener(Event.ADDED_TO_STAGE, init);
 		}
+    #if MP4_ALLOWED
+    hxvlc.util.Handle.init();
+    #end
 	}
 
 	private function init(?E:Event):Void
@@ -69,8 +71,6 @@ class Main extends Sprite
 		#if !debug
 		initialState = TitleState;
 		#end
-
-                SUtil.doTheCheck();
 
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, #if (flixel < "5.0.0") zoom, #end framerate, framerate, skipSplash, startFullscreen));
 
