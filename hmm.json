@@ -55,12 +55,12 @@
       "type": "haxelib",
       "version": null
     },
-{
+    {
       "name": "tjson",
       "type": "haxelib",
       "version": "1.4.0"
     },
-{
+    {
       "name": "json2object",
       "type": "git",
       "dir": null,
