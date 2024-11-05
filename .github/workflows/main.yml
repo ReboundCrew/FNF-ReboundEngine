@@ -26,6 +26,8 @@ jobs:
           haxelib setup C:/haxelib
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
+          haxelib remove jsonpath
+          haxelib remove jsonpatch
           haxelib list
         shell: cmd
       - name: Compile
