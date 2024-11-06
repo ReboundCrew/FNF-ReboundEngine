@@ -273,10 +273,6 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (FlxG.keys.justPressed.EIGHT)
-		{
-			FlxG.switchState(new CutsceneAnimTestState());
-		}
 
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
@@ -288,11 +284,6 @@ class TitleState extends MusicBeatState
 		}
 
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;
-
-		if (FlxG.keys.justPressed.FIVE)
-		{
-			FlxG.switchState(new CutsceneAnimTestState());
-		}
 
 		#if mobile
 		for (touch in FlxG.touches.list)
