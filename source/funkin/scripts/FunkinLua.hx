@@ -1,4 +1,4 @@
-package;
+package funkin.scripts;
 
 #if LUA_ALLOWED
 

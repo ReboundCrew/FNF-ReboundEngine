@@ -1,4 +1,4 @@
-package funkin.data.mobile.controls.flixel;
+package funkin.mobile.controls.flixel;
 
 import flixel.FlxG;
 import flixel.FlxSprite;

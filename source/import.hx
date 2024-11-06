@@ -8,6 +8,12 @@ import flixel.util.FlxColor;
 //Data
 import funkin.data.FPSCounter;
 import funkin.data.Paths;
+import funkin.data.Alphabet;
+
+// Scripts
+import funkin.scripts.ScriptGlobals;
+import funkin.scripts.FunkinHScript;
+import funkin.scripts.FunkinLua;
 
 //States
 import funkin.states.PlayState;
@@ -15,7 +21,7 @@ import funkin.states.menus.TitleState;
 import funkin.states.menus.MainMenuState;
 import funkin.states.menus.FreeplayState;
 import funkin.states.menus.StoryMenuState;
-
+import funkin.controls.InputFormatter;
 
 //Controls
 import funkin.controls.Controls;

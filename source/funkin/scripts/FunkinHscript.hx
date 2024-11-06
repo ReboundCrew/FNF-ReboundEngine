@@ -1,4 +1,4 @@
-package;
+package funkin.scripts;
 
 #if HSCRIPT_ALLOWED
 import hscript.Parser;

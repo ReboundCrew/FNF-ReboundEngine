@@ -1,4 +1,4 @@
-package;
+package funkin.controls;
 
 import flixel.FlxG;
 import flixel.input.keyboard.FlxKey;

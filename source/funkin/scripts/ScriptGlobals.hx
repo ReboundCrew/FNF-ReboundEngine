@@ -1,4 +1,4 @@
-package;
+package funkin.scripts;
 
 class ScriptGlobals {
     public static var Function_Stop:Dynamic = 1;
