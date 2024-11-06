@@ -1,4 +1,4 @@
-package funkin.data;
+package funkin.controls;
 
 import haxe.DynamicAccess;
 import haxe.Json;
