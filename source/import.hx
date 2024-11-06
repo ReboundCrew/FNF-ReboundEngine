@@ -6,32 +6,23 @@ import flixel.util.FlxDestroyUtil;
 import flixel.util.FlxColor;
 
 //Data
-import funkin.data.FPSCounter;
-import funkin.data.Paths;
-import funkin.data.Alphabet;
+import funkin.data.*;
 
 // Scripts
-import funkin.scripts.ScriptGlobals;
-import funkin.scripts.FunkinHScript;
-import funkin.scripts.FunkinLua;
+import funkin.scripts.*;
 
 //States
-import funkin.states.PlayState;
-import funkin.states.menus.TitleState;
-import funkin.states.menus.MainMenuState;
-import funkin.states.menus.FreeplayState;
-import funkin.states.menus.StoryMenuState;
-import funkin.controls.InputFormatter;
+import funkin.states.*;
+import funkin.states.menus.*;
+
+//SubStates
+import funkin.substates.*;
 
 //Controls
-import funkin.controls.Controls;
-import funkin.controls.Controls.Control;
-import funkin.controls.Controls.Device;
+import funkin.controls.*;
 #if mobile
-import funkin.mobile.MobileControlsSubState;
-import funkin.mobile.controls.flixel.FlxButton;
-import funkin.mobile.controls.flixel.FlxHitbox;
-import funkin.mobile.controls.MobileControls;
-import funkin.mobile.controls.flixel.FlxVirtualPad;
+import funkin.mobile.*;
+import funkin.mobile.controls.flixel.*;
+import funkin.mobile.controls.*;
 #end
 #end
