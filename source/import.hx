@@ -1,24 +1,28 @@
 #if !macro
-//Flixel
+// Flixel
 import flixel.FlxCamera;
 import flixel.input.actions.FlxActionInput;
 import flixel.util.FlxDestroyUtil;
 import flixel.util.FlxColor;
 
-//Data
+// Data
 import funkin.data.*;
+import funkin.data.characters.*;
+
+// Shaders
+import funkin.data.shaders.*;
 
 // Scripts
 import funkin.scripts.*;
 
-//States
+// States
 import funkin.states.*;
 import funkin.states.menus.*;
 
-//SubStates
+// SubStates
 import funkin.substates.*;
 
-//Controls
+// Controls
 import funkin.controls.*;
 #if mobile
 import funkin.mobile.*;
