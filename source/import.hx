@@ -23,7 +23,8 @@ import funkin.states.menus.*;
 import funkin.substates.*;
 
 // Controls
-import funkin.controls.*;
+import funkin.controls.Controls;
+import funkin.controls.InputFormatter;
 #if mobile
 import funkin.mobile.*;
 import funkin.mobile.controls.flixel.*;
