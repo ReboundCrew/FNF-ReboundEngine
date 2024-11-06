@@ -2,9 +2,7 @@ package funkin.states;
 
 import flixel.group.FlxSpriteGroup;
 import animate.FlxAnimate;
-import shaderslmfao.BuildingShaders;
 import ui.PreferencesMenu;
-import shaderslmfao.ColorSwap;
 #if DISCORD_ALLOWED
 import Discord.DiscordClient;
 #end

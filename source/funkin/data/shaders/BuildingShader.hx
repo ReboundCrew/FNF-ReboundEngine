@@ -1,27 +1,11 @@
-package;
+package funkin.data.shaders;
 
-// STOLEN FROM HAXEFLIXEL DEMO LOL
-import flixel.system.FlxAssets.FlxShader;
+import flixel.graphics.tile.FlxGraphicsShader;
 
-class WiggleEffect
-{
-	public var shader(default, null):WiggleShader = new WiggleShader();
-
-	public function new():Void
-	{
-		shader.uTime.value = [0];
-	}
-
-	public function update(elapsed:Float):Void
-	{
-		shader.uTime.value[0] += elapsed;
-	}
-}
-
-class WiggleShader extends FlxShader
+class BuildingShader extends FlxGraphicsShader
 {
 	@:glFragmentSource('
-		varying float openfl_Alphav;
+        varying float openfl_Alphav;
 		varying vec4 openfl_ColorMultiplierv;
 		varying vec4 openfl_ColorOffsetv;
 		varying vec2 openfl_TextureCoordv;
@@ -69,68 +53,17 @@ class WiggleShader extends FlxShader
 		}
 	
 
-		//uniform float tx, ty; // x,y waves phase
-		uniform float uTime;
-		
-		const int EFFECT_TYPE_DREAMY = 0;
-		const int EFFECT_TYPE_WAVY = 1;
-		const int EFFECT_TYPE_HEAT_WAVE_HORIZONTAL = 2;
-		const int EFFECT_TYPE_HEAT_WAVE_VERTICAL = 3;
-		const int EFFECT_TYPE_FLAG = 4;
-		
-		uniform int effectType;
-		
-		/**
-		 * How fast the waves move over time
-		 */
-		uniform float uSpeed;
-		
-		/**
-		 * Number of waves over time
-		 */
-		uniform float uFrequency;
-		
-		/**
-		 * How much the pixels are going to stretch over the waves
-		 */
-		uniform float uWaveAmplitude;
 
-		vec2 sineWave(vec2 pt)
-		{
-			float x = 0.0;
-			float y = 0.0;
-			
-			if (effectType == EFFECT_TYPE_DREAMY) 
-			{
-				float offsetX = sin(pt.y * uFrequency + uTime * uSpeed) * uWaveAmplitude;
-                pt.x += offsetX; // * (pt.y - 1.0); // <- Uncomment to stop bottom part of the screen from moving
-			}
-			else if (effectType == EFFECT_TYPE_WAVY) 
-			{
-				float offsetY = sin(pt.x * uFrequency + uTime * uSpeed) * uWaveAmplitude;
-				pt.y += offsetY; // * (pt.y - 1.0); // <- Uncomment to stop bottom part of the screen from moving
-			}
-			else if (effectType == EFFECT_TYPE_HEAT_WAVE_HORIZONTAL)
-			{
-				x = sin(pt.x * uFrequency + uTime * uSpeed) * uWaveAmplitude;
-			}
-			else if (effectType == EFFECT_TYPE_HEAT_WAVE_VERTICAL)
-			{
-				y = sin(pt.y * uFrequency + uTime * uSpeed) * uWaveAmplitude;
-			}
-			else if (effectType == EFFECT_TYPE_FLAG)
-			{
-				y = sin(pt.y * uFrequency + 10.0 * pt.x + uTime * uSpeed) * uWaveAmplitude;
-				x = sin(pt.x * uFrequency + 5.0 * pt.y + uTime * uSpeed) * uWaveAmplitude;
-			}
-			
-			return vec2(pt.x + x, pt.y + y);
-		}
+        uniform float alphaShit;
 
-		void main()
-		{
-			vec2 uv = sineWave(openfl_TextureCoordv);
-			gl_FragColor = texture2D(bitmap, uv);
+        void main()
+        {
+            vec4 color = flixel_texture2D(bitmap, openfl_TextureCoordv);
+
+            if (color.a > 0.0)
+                color -= alphaShit;
+            
+            gl_FragColor = color;
 		}')
 	@:glVertexSource('
 		attribute float openfl_Alpha;

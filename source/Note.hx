@@ -1,7 +1,6 @@
 package;
 
 import ui.PreferencesMenu;
-import shaderslmfao.ColorSwap;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.math.FlxMath;

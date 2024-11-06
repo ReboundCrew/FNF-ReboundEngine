@@ -1,4 +1,4 @@
-package shaderslmfao;
+package funkin.data.shaders;
 
 class BuildingShaders
 {

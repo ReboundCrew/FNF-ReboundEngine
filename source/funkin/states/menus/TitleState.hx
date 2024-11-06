@@ -3,8 +3,6 @@ package funkin.states.menus;
 import openfl.display.Sprite;
 import openfl.net.NetStream;
 import ui.PreferencesMenu;
-import shaderslmfao.BuildingShaders;
-import shaderslmfao.ColorSwap;
 #if DISCORD_ALLOWED
 import Discord.DiscordClient;
 #end  

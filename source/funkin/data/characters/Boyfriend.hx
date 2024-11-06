@@ -1,4 +1,4 @@
-package;
+package funkin.data.characters;
 
 import flixel.FlxG;
 import flixel.FlxSprite;

@@ -1,4 +1,4 @@
-package;
+package funkin.data.characters;
 
 import Section.SwagSection;
 import flixel.FlxG;
