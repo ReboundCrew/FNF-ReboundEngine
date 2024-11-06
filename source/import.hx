@@ -18,14 +18,14 @@ import funkin.states.menus.StoryMenuState;
 
 
 //Controls
-import funkin.data.Controls;
-import funkin.data.Controls.Control;
-import funkin.data.Controls.Device;
+import funkin.controls.Controls;
+import funkin.controls.Controls.Control;
+import funkin.controls.Controls.Device;
 #if mobile
-import funkin.data.mobile.MobileControlsSubState;
-import funkin.data.mobile.controls.flixel.FlxButton;
-import funkin.data.mobile.controls.flixel.FlxHitbox;
-import funkin.data.mobile.controls.MobileControls;
-import funkin.data.mobile.controls.flixel.FlxVirtualPad;
+import funkin.mobile.MobileControlsSubState;
+import funkin.mobile.controls.flixel.FlxButton;
+import funkin.mobile.controls.flixel.FlxHitbox;
+import funkin.mobile.controls.MobileControls;
+import funkin.mobile.controls.flixel.FlxVirtualPad;
 #end
 #end
