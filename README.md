@@ -1,8 +1,8 @@
 ## FNF Rebound Engine
 ![Play Engine logo](logo.png)
-- Rebound Engine is a Friday Night Funkin' Rewrite which adds new cool features to the game
+- Rebound Engine is a Friday Night Funkin' Rewrite which adds new cool features to the game.
 # WARNING!!!
-- Play Engine is on very early development state! You can request new features though pull requests.
+- Rebound Engine on very early development state!
 - Please Tell If You Have ISSUES with engine so we'll fix it as fast as possible!
 # Dev Team Members
 - [MaysLastPlay](https://github.com/MaysLastPlayGithub) - Main Programmer
