@@ -1,4 +1,4 @@
-package funkin.data;
+package funkin.backend;
 
 import flixel.FlxG;
 import openfl.display.Shader;
