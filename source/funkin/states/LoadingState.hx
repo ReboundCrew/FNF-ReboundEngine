@@ -1,4 +1,4 @@
-package;
+package funkin.states;
 
 import flixel.math.FlxMath;
 import lime.app.Promise;
