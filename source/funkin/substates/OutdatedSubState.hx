@@ -1,4 +1,4 @@
-package;
+package funkin.substates;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -17,7 +17,7 @@ class OutdatedSubState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 		var txt:FlxText = new FlxText(0, 0, FlxG.width,
-			"HEY! You're running an outdated version of Play Engine!\nCurrent version is v" + MainMenuState.EngineVer
+			"HEY! You're running an outdated version of Rebound Engine!\nCurrent version is v" + MainMenuState.EngineVer
 			+ " while the most recent version is 0.2.8!"
 			+ "!\nPress Space to Update Engine, or ESCAPE to ignore this!!",
 			32);
