@@ -1,6 +1,5 @@
-package;
+package funkin.states.options;
 
-import Controls.Control;
 import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
