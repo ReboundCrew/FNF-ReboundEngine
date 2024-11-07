@@ -1,4 +1,4 @@
-package;
+package funkin.data.stages;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
