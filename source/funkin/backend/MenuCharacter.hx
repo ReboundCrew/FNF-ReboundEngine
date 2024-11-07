@@ -1,4 +1,4 @@
-package funkin.data;
+package funkin.backend;
 
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
