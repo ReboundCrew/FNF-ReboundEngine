@@ -1,4 +1,4 @@
-package;
+package funkin.states.editors;
 
 import Conductor.BPMChangeEvent;
 import Section.SwagSection;
