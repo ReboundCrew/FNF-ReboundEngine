@@ -1,4 +1,4 @@
-package;
+package funkin.substates;
 
 import ui.PreferencesMenu;
 import flixel.FlxG;
