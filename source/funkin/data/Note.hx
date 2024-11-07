@@ -1,4 +1,4 @@
-package;
+package funkin.data;
 
 import ui.PreferencesMenu;
 import flixel.FlxSprite;
