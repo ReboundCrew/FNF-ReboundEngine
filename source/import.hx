@@ -9,6 +9,10 @@ import flixel.util.FlxColor;
 import funkin.data.*;
 import funkin.data.characters.*;
 
+// Others
+import funkin.backend.*;
+import funkin.backend.objects.*;
+
 // Shaders
 import funkin.data.shaders.*;
 
@@ -22,6 +26,8 @@ import funkin.backend.objects.*;
 // States
 import funkin.states.*;
 import funkin.states.menus.*;
+import funkin.states.options.*;
+import funkin.states.editors.*;
 
 // SubStates
 import funkin.substates.*;
