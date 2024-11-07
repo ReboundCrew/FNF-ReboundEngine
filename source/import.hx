@@ -16,8 +16,8 @@ import funkin.data.shaders.*;
 import funkin.scripts.*;
 
 // Stages and Objects
-import data.stages.*;
-import backend.objects.*;
+import funkin.data.stages.*;
+import funkin.backend.objects.*;
 
 // States
 import funkin.states.*;
