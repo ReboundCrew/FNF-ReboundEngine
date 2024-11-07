@@ -1,4 +1,4 @@
-package;
+package funkin.backend;
 
 import flixel.FlxSprite;
 import flixel.math.FlxPoint;
