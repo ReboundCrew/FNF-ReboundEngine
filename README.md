@@ -4,9 +4,6 @@
 # WARNING!!!
 - Rebound Engine on very early development state!
 - Please Tell If You Have ISSUES with engine so we'll fix it as fast as possible!
-# Dev Team Members
-- [MaysLastPlay](https://github.com/MaysLastPlayGithub) - Main Programmer
-- [Stefan2008](https://github.com/Stefan2008Git) - Second Programmer
 
 ## Credits / shoutouts to OG FNF Team
 
