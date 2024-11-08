@@ -28,6 +28,7 @@ import funkin.states.*;
 import funkin.states.menus.*;
 import funkin.states.options.*;
 import funkin.states.editors.*;
+import ui.*;
 
 // SubStates
 import funkin.substates.*;
